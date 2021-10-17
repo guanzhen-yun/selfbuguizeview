@@ -15,6 +15,7 @@ public class NewMainActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newmain);
         findViewById(R.id.idv_1).setOnClickListener(this);
+        findViewById(R.id.imv_1).setOnClickListener(this);
     }
 
     @Override
@@ -24,6 +25,9 @@ public class NewMainActivity extends AppCompatActivity implements View.OnClickLi
         }
         switch (v.getId()) {
             case R.id.idv_1:
+                mToast = Toast.makeText(this, v.getTag(v.getId()).toString(), Toast.LENGTH_SHORT);
+                break;
+            case R.id.imv_1:
                 mToast = Toast.makeText(this, v.getTag(v.getId()).toString(), Toast.LENGTH_SHORT);
                 break;
         }
